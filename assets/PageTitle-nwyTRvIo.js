@@ -1,1 +1,0 @@
-import{j as e}from"./ui-DEs-8j2V.js";function r({title:t,subTitle:s}){return e.jsxs("div",{className:"flex flex-col bg-white mt-4 px-8 gap-3 border-b border-gray-300 pb-3 pt-3",children:[e.jsx("p",{className:"text-2xl lg:text-3xl font-bold",children:t}),e.jsx("p",{className:"text-sm md:text-base text-gray-600",children:s})]})}export{r as P};
