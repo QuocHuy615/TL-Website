@@ -1,0 +1,1 @@
+import{af as r}from"./index-DmgL_2Vr.js";const n={getAll(){return r.get("/admin/brand/getAllBrands")},update(e,a){return r.put(`/admin/brand/${e}`,a)},delete(e){return r.delete(`/admin/brand/${e}`)},create(e){return r.post("/admin/brand/createBrand",e)}};export{n as b};
