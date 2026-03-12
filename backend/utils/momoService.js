@@ -42,10 +42,13 @@ exports.createMomoPayment = async (order) => {
   };
 
   try {
-    const response = await axios.post(endpoint, requestBody);
+    // ✅ Thêm timeout 15 giây để tránh treo nếu Momo server chậm
+    const response = await axios.post(endpoint, requestBody, {
+      timeout: 15000
+    });
     return response.data.payUrl;
   } catch (error) {
-    console.error(error);
+    console.error('Momo API Error:', error.message);
     return null;
   }
 }

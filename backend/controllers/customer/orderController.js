@@ -41,15 +41,29 @@ const createOrder = async (req, res) => {
       });
     }
 
+    // ✅ Tối ưu: Query tất cả products một lần thay vì từng cái
+    const selectedCartItems = cart.items.filter(item => 
+      items.includes(item.productId.toString())
+    );
+
+    if (selectedCartItems.length === 0) {
+      return res.status(400).json({
+        message: "No valid items selected"
+      });
+    }
+
+    const productIds = selectedCartItems.map(item => item.productId);
+    const products = await Product.find({ _id: { $in: productIds } });
+    
+    // Tạo Map để truy cập product nhanh
+    const productMap = new Map(products.map(p => [p._id.toString(), p]));
+
     // Loop qua các item để lấy tổng tiền
     let subtotal = 0;
     const orderItems = [];
-    for (const item of cart.items) {
-      if (!items.includes(item.productId.toString())) {
-        continue;
-      }
-
-      const product = await Product.findById(item.productId);
+    
+    for (const item of selectedCartItems) {
+      const product = productMap.get(item.productId.toString());
       if (!product) continue;
 
       if (product.stockQuantity < item.quantity) {

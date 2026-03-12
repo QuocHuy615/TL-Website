@@ -16,10 +16,20 @@ const vnpay_return = async (req, res) => {
 
   const secretKey = process.env.VNP_HASH_SECRET;
 
+  // Debug logging
+  console.log('=== VNPay Return Debug ===');
+  console.log('SecureHash from VNPay:', secureHash);
+  console.log('VNP_HASH_SECRET:', secretKey);
+
   const querystring = require('qs');
   const signData = querystring.stringify(vnp_Params, { encode: false });
+  console.log('SignData:', signData);
+  
   const hmac = crypto.createHmac("sha512", secretKey);
   const signed = hmac.update(new Buffer.from(signData, 'utf-8')).digest("hex");
+  console.log('Computed Hash:', signed);
+  console.log('Hash Match:', secureHash === signed);
+  console.log('========================');
 
   if (secureHash === signed) {
 

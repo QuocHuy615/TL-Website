@@ -12,6 +12,9 @@ exports.createPaymentUrl = (req, order) => {
   const vnpUrl = process.env.VNP_URL;
   const returnUrl = process.env.VNP_RETURN_URL;
 
+  // Debug log
+  console.log('VNP_RETURN_URL:', returnUrl);
+
   const ipAddr = req.headers['x-forwarded-for'] ||
     req.connection.remoteAddress ||
     req.socket.remoteAddress ||

@@ -31,7 +31,6 @@ const CartPage: React.FC = () => {
     try {
       const res: any = await cartService.getCart();
       if (res && res.cart) setCart(res.cart);
-      console.log("Fetched cart:", res);
     } catch (error: any) {
       if (error.response?.status === 404) setCart(null);
     } finally {

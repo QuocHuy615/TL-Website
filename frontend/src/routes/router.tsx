@@ -89,14 +89,14 @@ const router = createBrowserRouter([
           },
           { path: "cart", element: <CustomerCartPage /> },
           { path: "checkout", element: <CheckoutPage /> },
-          { path: "/orders/:code", element: <OrderDetailPage /> },
-          { path: "/order-success", element: <OrderSuccessPage /> },
-          { path: "/order-failed", element: <OrderErrorPage /> },
-          { path: "/order-error", element: <OrderErrorPage /> },
+          { path: "orders/:code", element: <OrderDetailPage /> },
+          { path: "order-success", element: <OrderSuccessPage /> },
+          { path: "order-failed", element: <OrderErrorPage /> },
+          { path: "order-error", element: <OrderErrorPage /> },
         ],
       },
       {
-        path: "/category/:id",
+        path: "category/:id",
         element: <CategoryDetailPage />,
         loader: categoryDetailLoader,
       },
@@ -129,12 +129,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/reset-password/:token",
+    path: "reset-password/:token",
     element: <CustomerResetPasswordPage />,
   },
-
   {
-    path: "/admin",
+    path: "admin",
     element: <ProtectedRouteAdmin />,
     errorElement: <ErrorPage />,
     children: [
@@ -163,11 +162,15 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/admin/login",
+    path: "admin/login",
     element: 
         <AdminLoginPage />,
     errorElement: <ErrorPage />,
   },
-]);
+],
+{
+  basename: "/TL-Website",
+} 
+);
 
 export default router;
