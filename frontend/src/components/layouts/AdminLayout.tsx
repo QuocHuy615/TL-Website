@@ -9,7 +9,7 @@ import { Footer } from "../admin/common/Footer";
 
 export default function AdminLayout() {
   return (
-    <SidebarProvider >
+    <SidebarProvider style={{ fontFamily: '"Nunito", sans-serif' }}>
       <AppSidebar />
       <SidebarInset className="bg-[#F7F9FC]">
         <Header/>
