@@ -333,7 +333,8 @@ const chatWithAI = async (req, res) => {
     
     // Send detailed error in development, generic in production
     const errorMsg = process.env.NODE_ENV === 'production' 
-      ? "Xin lỗi, tôi đang gặp sự cố kỹ thuật. Vui lòng thử lại sau."
+      // ? "Xin lỗi, tôi đang gặp sự cố kỹ thuật. Vui lòng thử lại sau."
+      ? error.message
       : `Lỗi: ${error.message}`;
     
     res.write(`data: ${JSON.stringify({ content: errorMsg })}\n\n`);
