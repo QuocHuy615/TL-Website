@@ -1,4 +1,4 @@
-import { Mail, HelpCircle, Settings } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,20 +14,6 @@ export function Footer() {
 
           {/* Right Side - Links */}
           <div className="flex items-center gap-6">
-            <a
-              href="#"
-              className="flex items-center gap-1.5 text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              <HelpCircle className="w-4 h-4" />
-              Trợ giúp
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-1.5 text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              <Settings className="w-4 h-4" />
-              Cài đặt
-            </a>
             <a
               href="mailto:support@admin.com"
               className="flex items-center gap-1.5 text-gray-600 hover:text-blue-600 transition-colors"
