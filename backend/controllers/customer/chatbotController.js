@@ -268,9 +268,9 @@ const chatWithAI = async (req, res) => {
         advisorPrompt = AdvisorAgent.getSpecializedPrompt();
       }
 
-      // Fallback Order Check if OTHER
+      // Fallback Order Check if OTHER (only for authenticated users)
       let orderInfo = "";
-      if (intent === "OTHER") {
+      if (intent === "OTHER" && typeof userId !== 'string') {
         const orders = await Order.find({ userId }).sort({ createdAt: -1 }).limit(1);
         if (orders.length > 0) {
           const o = orders[0];
