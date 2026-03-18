@@ -36,7 +36,7 @@ const BotMessage: React.FC<BotMessageProps> = ({ content }) => {
     // 1. Cải tiến: Tách JSON từ nội dung hỗn hợp (Hỗ trợ cả Markdown Block & Raw JSON)
     try {
       // Sử dụng cleanContent đã loại bỏ <think> để regex không bị nhiễu
-      const jsonRegex = /({[\s\S]*"type"\s*:\s*"product_list(?:_grouped)?["s\S]*"data"[\s\S]*})/;
+      const jsonRegex = /({[\s\S]*"type"\s*:\s*"product_list(?:_grouped)?[\s\S]*"data"[\s\S]*})/;
       const match = cleanContent.match(jsonRegex);
 
       if (match) {
