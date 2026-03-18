@@ -167,10 +167,7 @@ const router = createBrowserRouter([
         <AdminLoginPage />,
     errorElement: <ErrorPage />,
   },
-],
-{
-  basename: "/TL-Website",
-} 
+]
 );
 
 export default router;
