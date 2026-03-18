@@ -1,1 +1,0 @@
-import{af as r}from"./index-DmgL_2Vr.js";const u={getAll(e){return r.get("admin/user/getAllUsers",{params:e})},getById(e){return r.get(`admin/user/${e}`)},updateRole(e,t){return r.put(`admin/user/${e}`,{role:t})}};export{u};

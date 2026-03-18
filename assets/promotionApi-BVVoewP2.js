@@ -1,0 +1,1 @@
+import{af as t}from"./index-CIN9oPlu.js";const n={getAll(o){return t.get("admin/promotion/getAllPromotions",{params:o})},getById(o){return t.get(`admin/promotion/${o}`)},update(o,e){return t.put(`admin/promotion/${o}`,e)},create(o){return t.post("admin/promotion/createPromotion",o)},delete(o){return t.delete(`admin/promotion/${o}`)}};export{n as p};
