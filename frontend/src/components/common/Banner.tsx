@@ -1,9 +1,9 @@
 import CarouselTemplate from "@/components/product/carousel/carousel";
-import mainBanner1 from "@/assets/banners/main-banner-1.webp";
-import mainBanner2 from "@/assets/banners/main-banner-2.webp";
-import mainBanner3 from "@/assets/banners/main-banner-3.webp";
-import mainBanner4 from "@/assets/banners/main-banner-4.webp";
-import mainBanner5 from "@/assets/banners/main-banner-5.webp";
+import mainBanner1 from "@/assets/Banners/main-banner-1.webp";
+import mainBanner2 from "@/assets/Banners/main-banner-2.webp";
+import mainBanner3 from "@/assets/Banners/main-banner-3.webp";
+import mainBanner4 from "@/assets/Banners/main-banner-4.webp";
+import mainBanner5 from "@/assets/Banners/main-banner-5.webp";
 
 const mainBanners = [
   {
