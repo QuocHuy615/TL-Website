@@ -5,7 +5,7 @@ import ProtectedRouteCustomer from "./ProtectedRouteCustomer";
 
 import MainLayout from "@/components/layouts/MainLayout";
 import AuthLayout from "@/components/layouts/AuthLayout";
-import HomePage from "@/pages/home/HomePage";
+const HomePage = React.lazy(() => import("@/pages/home/HomePage"));
 
 //CUSTOMER
 

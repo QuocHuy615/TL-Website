@@ -9,7 +9,7 @@ const mainBanners = [
   {
     id: 2,
     image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-ban-phim-sub-banner-t1-26.png",
+      "https://cdn.hstatic.net/filesti/200000722513/file/gearvn-ban-phim-sub-banner-t1-26.png",
   },
   {
     id: 3,
@@ -33,6 +33,26 @@ const mainBanners = [
   },
 ];
 
+const HeroBannerImage = ({ image }: { image: string }) => (
+  <img
+    src={image}
+    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+    alt="Hero Banner"
+    fetchPriority="high"
+    decoding="async"
+  />
+);
+
+const LazyBannerImage = ({ image, alt }: { image: string; alt: string }) => (
+  <img
+    src={image}
+    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+    alt={alt}
+    loading="lazy"
+    decoding="async"
+  />
+);
+
 function Banner() {
   return (
     <section className="w-full max-w-7xl mx-auto p-2 space-y-3">
@@ -47,11 +67,7 @@ function Banner() {
             className="h-full"
             renderItem={(item) => (
               <div className="h-[200px] sm:h-[300px] md:h-[400px] w-full">
-                <img
-                  src={item.image}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  alt="Hero Banner"
-                />
+                <HeroBannerImage image={item.image} />
               </div>
             )}
           />
@@ -63,11 +79,7 @@ function Banner() {
               key={item.id}
               className="relative min-w-[85%] md:min-w-0 flex-1 overflow-hidden rounded-lg shadow-sm snap-center"
             >
-              <img
-                src={item.image}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                alt="Sub Banner"
-              />
+              <LazyBannerImage image={item.image} alt="Sub Banner" />
             </div>
           ))}
         </div>
@@ -77,13 +89,9 @@ function Banner() {
         {mainBanners.slice(3, 6).map((item) => (
           <div
             key={item.id}
-            className="h-[120px] sm:h-[160px] md:h-[180px] min-w-[70%] sm:min-w-0 overflow-hidden rounded-lg shadow-sm snap-center"
+            className="h-[120px] sm:h-40 md:h-[180px] min-w-[70%] sm:min-w-0 overflow-hidden rounded-lg shadow-sm snap-center"
           >
-            <img
-              src={item.image}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              alt="Bottom Banner"
-            />
+              <LazyBannerImage image={item.image} alt="Bottom Banner" />
           </div>
         ))}
       </div>
