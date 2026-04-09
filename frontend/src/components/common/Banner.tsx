@@ -1,37 +1,33 @@
 import CarouselTemplate from "@/components/product/carousel/carousel";
+import mainBanner1 from "@../assets/banners/main-banner-1.png";
+import mainBanner2 from "@../assets/banners/main-banner-2.png";
+import mainBanner3 from "@../assets/banners/main-banner-3.png";
+import mainBanner4 from "@../assets/banners/main-banner-4.png";
+import mainBanner5 from "@../assets/banners/main-banner-5.png";
 
 const mainBanners = [
   {
     id: 1,
-    image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-build-pc-sub-banner-t1-26.png",
+    image: mainBanner1,
   },
   {
     id: 2,
-    image:
-      "https://cdn.hstatic.net/filesti/200000722513/file/gearvn-ban-phim-sub-banner-t1-26.png",
+    image: mainBanner2,
   },
   {
     id: 3,
-    image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-laptop-gaming-sub-banner-t1-26.png",
+    image: mainBanner3,
   },
   {
     id: 4,
-    image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-laptop-van-phong-sub-banner-t1-26.png",
+    image: mainBanner4,
   },
   {
     id: 5,
-    image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-pc-i5-sub-banner-t1-26.png",
-  },
-  {
-    id: 6,
-    image:
-      "https://cdn.hstatic.net/files/200000722513/file/gearvn-man-hinh-sub-banner-t1-26.png",
+    image: mainBanner5,
   },
 ];
+
 
 const HeroBannerImage = ({ image }: { image: string }) => (
   <img
