@@ -6,7 +6,6 @@ import { Outlet } from "react-router-dom";
 import { Skeleton } from "@/components/ui/skeleton";
 import ScrollToTop from "../common/ScrollToTop";
 import Zalo from "../common/Zalo";
-import SideBanner from "../common/SideBanner";
 import ChatBot from "../chatbot/ChatBot";
 
 import mainBG from "@/assets/images/main-bg.jpg";
@@ -43,15 +42,6 @@ const MainLayout: React.FC = () => {
     <div className="flex flex-col min-h-screen pb-16 md:pb-0 bg-[#0a0a0a]">
       <ScrollToTop />
       <Header />
-
-      <SideBanner
-        position="left"
-        imgSrc="https://cdn.hstatic.net/files/200000722513/file/gearvn-pc-gvn-sticky-t1-26.png"
-      />
-      <SideBanner
-        position="right"
-        imgSrc="https://cdn.hstatic.net/files/200000722513/file/gearvn-laptop-gaming-sticky-t1-26.png"
-      />
 
       <main
         className="grow relative bg-cover bg-center bg-fixed w-full"

@@ -6,6 +6,9 @@ import BottomCategory from "@/pages/home/BottomCategory";
 import ProductListCarousel from "@/components/product/carousel/ProductListCarousel";
 import MobileProductSlide from "@/components/product/carousel/MobileSlide";
 import type { IHomeSection } from "./home.loader";
+import promoteBanner1 from '@/assets/Banners/promote-banner-1.webp';
+import promoteBanner2 from '@/assets/Banners/promote-banner-2.webp';
+import promoteBanner3 from '@/assets/Banners/promote-banner-3.webp';
 
 const PromotionBannerItem = ({ src }: { src: string }) => (
   <div className="group min-w-[85%] md:min-w-0 snap-center overflow-hidden rounded-lg border border-zinc-800 shadow-md">
@@ -75,9 +78,9 @@ const HomePage = () => {
 
       <PromotionBannerRow
         images={[
-          "https://file.hstatic.net/200000722513/file/banner_790x250_tai_nghe_6f6dcb17d3a54fcc88b3de96762d2d41.jpg",
-          "https://file.hstatic.net/200000722513/file/bot_promotion_banner_small_2_2ad55c2345c64fbfb87dab4957b33914.png",
-          "https://cdn.hstatic.net/files/200000722513/file/gearvn-man-hinh-t10-bot-promotion-big.jpg",
+          "https://tanthanhdanh.vn/wp-content/uploads/2025/10/TIEN-PHONG-CONG-NGHE-UU-DAI-CUC-PHE-T102025-800x440-2-1.png",
+          "https://edgeup.asus.com/wp-content/uploads/2024/09/campaign-banner.jpg",
+          "https://tanthanhdanh.vn/wp-content/uploads/2023/09/BannerWeb_BuildMayCPUGiaSieuTot_800x440.jpg",
         ]}
       />
 
@@ -86,9 +89,9 @@ const HomePage = () => {
 
       <PromotionBannerRow
         images={[
-          "https://gamelade.vn/wp-content/uploads/2025/06/call-of-duty-black-ops-7-announced.webp",
-          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238810/header.jpg?t=1747167586",
-          "https://eu.redmagic.gg/cdn/shop/files/banner-pc_2x_db79e769-d48e-4beb-8bb9-26826e2a63c8.png?v=1679906718&width=2400",
+          promoteBanner1,
+          promoteBanner2,
+          promoteBanner3,
         ]}
       />
 
