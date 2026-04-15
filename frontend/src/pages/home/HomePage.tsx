@@ -10,8 +10,8 @@ import promoteBanner1 from '@/assets/Banners/promote-banner-1.webp';
 import promoteBanner2 from '@/assets/Banners/promote-banner-2.webp';
 import promoteBanner3 from '@/assets/Banners/promote-banner-3.webp';
 import SideBanner from "@/components/common/SideBanner";
-import bannerSide1 from "@/assets/banners/banner-side1.webp";
-import bannerSide2 from "@/assets/banners/banner-side2.webp";
+import bannerSide1 from "@/assets/Banners/banner-side1.webp";
+import bannerSide2 from "@/assets/Banners/banner-side2.webp";
 
 const PromotionBannerItem = ({ src }: { src: string }) => (
   <div className="group min-w-[85%] md:min-w-0 snap-center overflow-hidden rounded-lg border border-zinc-800 shadow-md">
