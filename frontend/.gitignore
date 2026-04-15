@@ -27,3 +27,5 @@ dist-ssr
 # Project specific
 database.zip
 ~$*.docx
+
+.env
