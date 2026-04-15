@@ -43,12 +43,16 @@ const MainLayout: React.FC = () => {
       <ScrollToTop />
       <Header />
 
-      <main
-        className="grow relative bg-cover bg-center bg-fixed w-full"
-        style={{
-          backgroundImage: `url(${mainBG})`,
-        }}
-      >
+      <main className="grow relative w-full overflow-hidden">
+        <img
+          src={mainBG}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6">
