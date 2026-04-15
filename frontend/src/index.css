@@ -11,10 +11,21 @@
   src: url("./assets//fonts/GameOfSquids.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
+}
+
+/* Tune fallback metrics so text stays stable when Nunito swaps in. */
+@font-face {
+  font-family: "Nunito Fallback";
+  src: local("Arial");
+  ascent-override: 96%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 101%;
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "Nunito Fallback", sans-serif;
   margin: 0;
   background: #ececec;
 }
