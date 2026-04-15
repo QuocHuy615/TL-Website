@@ -9,6 +9,9 @@ import type { IHomeSection } from "./home.loader";
 import promoteBanner1 from '@/assets/Banners/promote-banner-1.webp';
 import promoteBanner2 from '@/assets/Banners/promote-banner-2.webp';
 import promoteBanner3 from '@/assets/Banners/promote-banner-3.webp';
+import SideBanner from "@/components/common/SideBanner";
+import bannerSide1 from "@/assets/Banners/banner-side-1.webp";
+import bannerSide2 from "@/assets/Banners/banner-side-2.webp";
 
 const PromotionBannerItem = ({ src }: { src: string }) => (
   <div className="group min-w-[85%] md:min-w-0 snap-center overflow-hidden rounded-lg border border-zinc-800 shadow-md">
@@ -73,6 +76,9 @@ const HomePage = () => {
     <div className="mx-auto px-2 sm:px-4 lg:px-8 space-y-1 py-3 bg-transparent">
       <Banner />
       <ServicePolicy />
+
+      <SideBanner position="left" imgSrc={bannerSide1} />
+      <SideBanner position="right" imgSrc={bannerSide2} />
 
       <RenderSection data={pc} />
 
