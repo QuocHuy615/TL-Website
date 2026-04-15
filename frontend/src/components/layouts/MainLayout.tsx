@@ -8,7 +8,7 @@ import ScrollToTop from "../common/ScrollToTop";
 import Zalo from "../common/Zalo";
 import ChatBot from "../chatbot/ChatBot";
 
-import mainBG from "@/assets/images/main-bg.jpg";
+import mainBG from "@/assets/images/main-bg.webp";
 
 import nProgress from "nprogress";
 
