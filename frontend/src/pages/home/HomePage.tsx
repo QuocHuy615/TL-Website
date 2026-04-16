@@ -9,6 +9,9 @@ import type { IHomeSection } from "./home.loader";
 import promoteBanner1 from '@/assets/Banners/promote-banner-1.webp';
 import promoteBanner2 from '@/assets/Banners/promote-banner-2.webp';
 import promoteBanner3 from '@/assets/Banners/promote-banner-3.webp';
+import promoteBanner4 from '@/assets/Banners/promote-banner-4.webp';
+import promoteBanner5 from '@/assets/Banners/promote-banner-5.webp';
+import promoteBanner6 from '@/assets/Banners/promote-banner-6.webp';
 import SideBanner from "@/components/common/SideBanner";
 import bannerSide1 from "@/assets/Banners/banner-side1.webp";
 import bannerSide2 from "@/assets/Banners/banner-side2.webp";
@@ -84,9 +87,9 @@ const HomePage = () => {
 
       <PromotionBannerRow
         images={[
-          "https://tanthanhdanh.vn/wp-content/uploads/2025/10/TIEN-PHONG-CONG-NGHE-UU-DAI-CUC-PHE-T102025-800x440-2-1.png",
-          "https://edgeup.asus.com/wp-content/uploads/2024/09/campaign-banner.jpg",
-          "https://tanthanhdanh.vn/wp-content/uploads/2023/09/BannerWeb_BuildMayCPUGiaSieuTot_800x440.jpg",
+          promoteBanner4,
+          promoteBanner5,
+          promoteBanner6,
         ]}
       />
 
