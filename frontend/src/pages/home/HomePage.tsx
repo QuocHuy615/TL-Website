@@ -12,9 +12,6 @@ import promoteBanner3 from '@/assets/Banners/promote-banner-3.webp';
 import promoteBanner4 from '@/assets/Banners/promote-banner-4.webp';
 import promoteBanner5 from '@/assets/Banners/promote-banner-5.webp';
 import promoteBanner6 from '@/assets/Banners/promote-banner-6.webp';
-import SideBanner from "@/components/common/SideBanner";
-import bannerSide1 from "@/assets/Banners/banner-side1.webp";
-import bannerSide2 from "@/assets/Banners/banner-side2.webp";
 
 const PromotionBannerItem = ({ src }: { src: string }) => (
   <div className="group min-w-[85%] md:min-w-0 snap-center overflow-hidden rounded-lg border border-zinc-800 shadow-md">
@@ -80,8 +77,8 @@ const HomePage = () => {
       <Banner />
       <ServicePolicy />
 
-      <SideBanner position="left" imgSrc={bannerSide1} />
-      <SideBanner position="right" imgSrc={bannerSide2} />
+      {/* <SideBanner position="left" imgSrc={bannerSide1} />
+      <SideBanner position="right" imgSrc={bannerSide2} /> */}
 
       <RenderSection data={pc} />
 

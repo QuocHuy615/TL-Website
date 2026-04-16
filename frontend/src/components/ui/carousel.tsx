@@ -46,6 +46,7 @@ function Carousel({
   setApi,
   plugins,
   className,
+  style,
   children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
@@ -98,7 +99,8 @@ function Carousel({
     api.on("select", onSelect)
 
     return () => {
-      api?.off("select", onSelect)
+      api.off("select", onSelect)
+      api.off("reInit", onSelect)
     }
   }, [api, onSelect])
 
@@ -119,6 +121,7 @@ function Carousel({
       <div
         onKeyDownCapture={handleKeyDown}
         className={cn("relative", className)}
+        style={{ contain: "layout paint", ...style }}
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"

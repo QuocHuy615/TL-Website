@@ -35,29 +35,54 @@ function CarouselTemplate<T>({
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
 
-  const plugin = React.useRef(
-    Autoplay({ delay: autoplayDelay, stopOnInteraction: false })
+  const autoplayPlugin = React.useMemo(
+    () =>
+      autoplay
+        ? Autoplay({
+            delay: autoplayDelay,
+            stopOnInteraction: false,
+            stopOnMouseEnter: true,
+          })
+        : null,
+    [autoplay, autoplayDelay]
   );
+
+  const plugins = React.useMemo(
+    () => (autoplayPlugin ? [autoplayPlugin] : undefined),
+    [autoplayPlugin]
+  );
+
+  const updateCurrent = React.useCallback((carouselApi: CarouselApi) => {
+    if (!carouselApi) return;
+    setCurrent(carouselApi.selectedScrollSnap());
+  }, []);
 
   React.useEffect(() => {
     if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+    updateCurrent(api);
+    api.on("select", updateCurrent);
+    api.on("reInit", updateCurrent);
+
+    return () => {
+      api.off("select", updateCurrent);
+      api.off("reInit", updateCurrent);
+    };
+  }, [api, updateCurrent]);
 
   return (
-    <div className={cn("w-full relative group rounded-xl", className)}>
+    <div
+      className={cn("w-full relative group rounded-xl", className)}
+      style={{ contain: "layout paint" }}
+    >
       <Carousel
         setApi={setApi}
-        plugins={[plugin.current]}
+        plugins={plugins}
         opts={{
           align: "start",
           loop: true,
         }}
-        onMouseEnter={autoplay ? () => plugin.current.stop() : undefined}
-        onMouseLeave={autoplay ? () => plugin.current.play() : undefined}
+        onMouseEnter={autoplayPlugin ? () => autoplayPlugin.stop() : undefined}
+        onMouseLeave={autoplayPlugin ? () => autoplayPlugin.play() : undefined}
         className="w-full"
       >
         <CarouselContent className="-ml-2 md:-ml-4">
